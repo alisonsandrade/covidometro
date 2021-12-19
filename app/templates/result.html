@@ -1,0 +1,31 @@
+{% include 'base.html' %}
+
+<div class="container mt-3">
+    <h1>Resultado da pesquisa</h1>
+
+    <div class="card">
+        <div class="card-header">Data da última atualização: {{ result.date }}</div>
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <p>Município</p>
+                <footer class="blockquote-footer">{{ result.city }}/{{ result.state }}</footer>
+            </blockquote>
+            <blockquote class="blockquote mb-0">
+                <p>Número de casos confirmados</p>
+                <footer class="blockquote-footer">{{ result.last_available_confirmed }}</footer>
+            </blockquote>
+            <blockquote class="blockquote mb-0">
+                <p>Total de óbitos acumulados</p>
+                <footer class="blockquote-footer">{{ result.last_available_deaths }}</footer>
+            </blockquote>
+            <blockquote class="blockquote mb-0">
+                <p>População estimada IBGE</p>
+                <footer class="blockquote-footer">{{ result.estimated_population }}</footer>
+            </blockquote>
+        </div>
+    </div>
+
+    <div class="mt-2">
+        <a href="/" class="btn btn-secondary">Retornar</a>
+    </div>
+</div>

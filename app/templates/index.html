@@ -1,0 +1,54 @@
+{% include 'base.html' %}
+
+<div class="container mt-4">
+    <div>
+        <h4>Sistema para acompanhamento da COVID-19 em todo o Brasil.</h4>
+        <small>Baseado na api do brasil.io e atualizado de acordo com os dados estatísticos de cada Estado.</small>
+    </div>
+
+    <form action="search" class="row" method="post">
+        <div class="row">
+            <div class="col">
+                <label for="formControlCity" class="form-label">Cidade</label>
+                <input type="text" class="form-control" id="formControlCity" name="city" placeholder="Nome da cidade" required>
+            </div>
+            <div class="col">
+                <label for="formControlState" class="form-label">Estado</label>
+                <select class="form-select" id="formControlState" name="state" required>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espirito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB" selected>Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-12 mt-3">
+            <button class="btn btn-primary" type="submit" name="search">Pesquisar</button>
+        </div>
+    </form>
+    
+</div>
